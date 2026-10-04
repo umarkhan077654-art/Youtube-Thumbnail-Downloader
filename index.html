@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube Thumbnail Downloader</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brand-icon">▶</div>
+            <span>YouTube Thumbnail Downloader</span>
+        </div>
+
+        <div class="nav-badge">
+            FREE TOOL
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                Fast • Free • Simple
+            </div>
+
+            <h1>
+                YouTube Thumbnail
+                <span>Downloader</span>
+            </h1>
+
+            <p>
+                Paste a YouTube video link and instantly get its
+                thumbnail in high quality.
+            </p>
+
+        </section>
+
+
+        <!-- Downloader Card -->
+        <section class="downloader-card">
+
+            <div class="input-label">
+                <span>🔗</span>
+                YouTube Video URL
+            </div>
+
+            <div class="input-wrapper">
+
+                <input
+                    type="text"
+                    id="youtubeUrl"
+                    placeholder="Paste YouTube link here..."
+                    autocomplete="off"
+                >
+
+                <button id="clearBtn" class="clear-btn">
+                    ×
+                </button>
+
+                <button id="getBtn" class="get-btn">
+                    <span class="btn-text">Get Thumbnail</span>
+                    <span class="loader"></span>
+                </button>
+
+            </div>
+
+            <div id="errorMessage" class="error-message">
+                Please enter a valid YouTube URL.
+            </div>
+
+
+            <!-- Result -->
+            <div id="result" class="result">
+
+                <div class="result-header">
+                    <div>
+                        <span class="small-label">THUMBNAIL PREVIEW</span>
+                        <h2>Your Thumbnail</h2>
+                    </div>
+
+                    <div class="video-id" id="videoId">
+                        ID: —
+                    </div>
+                </div>
+
+
+                <div class="image-container">
+
+                    <div class="image-loader" id="imageLoader">
+                        <div class="spinner"></div>
+                        <p>Loading thumbnail...</p>
+                    </div>
+
+                    <img
+                        id="thumbnail"
+                        src=""
+                        alt="YouTube Thumbnail"
+                    >
+
+                </div>
+
+
+                <!-- Quality -->
+                <div class="quality-section">
+
+                    <div class="quality-title">
+                        <span>Choose Quality</span>
+                        <span id="resolutionText">Maximum available</span>
+                    </div>
+
+                    <div class="quality-grid">
+
+                        <button
+                            class="quality-btn active"
+                            data-quality="maxresdefault"
+                            data-name="Maximum"
+                        >
+                            <strong>MAX</strong>
+                            <span>Maximum</span>
+                        </button>
+
+                        <button
+                            class="quality-btn"
+                            data-quality="hqdefault"
+                            data-name="HD"
+                        >
+                            <strong>HD</strong>
+                            <span>High Quality</span>
+                        </button>
+
+                        <button
+                            class="quality-btn"
+                            data-quality="sddefault"
+                            data-name="SD"
+                        >
+                            <strong>SD</strong>
+                            <span>Standard</span>
+                        </button>
+
+                        <button
+                            class="quality-btn"
+                            data-quality="mqdefault"
+                            data-name="Medium"
+                        >
+                            <strong>480P</strong>
+                            <span>Medium</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="action-buttons">
+
+                    <button id="downloadBtn" class="download-btn">
+                        <span>↓</span>
+                        Download Thumbnail
+                    </button>
+
+                    <button id="copyBtn" class="copy-btn">
+                        <span>⧉</span>
+                        Copy Image URL
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section class="features">
+
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div>
+                    <h3>Super Fast</h3>
+                    <p>Get thumbnails instantly.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🖼️</div>
+                <div>
+                    <h3>High Quality</h3>
+                    <p>Download available resolutions.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <div>
+                    <h3>Privacy Friendly</h3>
+                    <p>No account required.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Toast -->
+    <div id="toast" class="toast">
+        <span class="toast-icon">✓</span>
+        <span id="toastText">Done!</span>
+    </div>
+
+
+    <footer>
+        <p>
+            © 2026 YouTube Thumbnail Downloader
+        </p>
+        <span>Made for creators</span>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
